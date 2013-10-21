@@ -16,9 +16,69 @@
       <li><a href="#resources" class="smoothScroll"> Other Resources</a> </li>
       <li><a href="#contact" class="smoothScroll"> Contact Us</a> </li>
     </ul>
-    <!-- </nav> -->
   </header>
-</body>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/smoothscroll.js"></script>
-</html>
+  <div id="about">
+
+  </div>
+
+  <div id="whiteboard">
+    <h2>Whiteboarding</h2>
+    <h3>Roman Numerals</h3>
+
+      Write a method that converts an integer to its Roman numeral equivalent, i.e., 476 => 'CDLXXVI'.
+      For reference, these are the building blocks for how we encode numbers with Roman numerals:
+      I  = 1, V =  5, X  = 10, L =  50, C   = 100, D  = 500, M = 1000
+      Choose Between
+      Old-school Roman numerals (no subtraction of 4s and 9s)
+      4 = IIII, 9 = VIIII etc.
+      Modern Roman numerals (subtraction)
+      4 = IV, 9 = IX,  14 = XIV, 40 = XL, 44 = XLIV, 90 = XC, 944 = CMXLIV
+
+      <h3>Pig Latin</h3>
+      Write a method the takes in a string and returns the pig latin equivalent.  Pig Latin takes the first consonant, moves it to the end of the word and places “ay” at the end.  If the string starts with a consonant do nothing.
+      “pig” = “igpay”, “banana” = “ananabay”
+      Shuffle
+      Without using a shuffle or sort write your own shuffle method for an array. The method will take an array and returns a new array with all of the elements in a random order. One important property of a good shuffle method is that every permutation is equally likely.
+      Anagrams
+      An anagram is a word formed by rearranging the letters of another word, e.g., iceman is an anagram of cinema.
+
+      We're going to write a method called anagrams_for that takes as its input a word and an array of words, representing a dictionary, and returns an array consisting of all the anagrams of the input word.
+
+      anagrams_for should return an empty array ([]) if no anagrams are found in the dictionary. You don't have to worry about the order of the returned Array.
+
+      <h3>Factorial</h3>
+      Write a recursive and iterative solution for a finding the factorial of a number. If you don't remember, the factorial of a non-negative integer n, denoted n! is the product of all positive integers less than . For example, 5! = 5 * 4 * 3 * 2 * 1
+      Binary vs. Linear Searching
+      Write an example demonstrating Binary Search.
+
+      Write an example demonstrating Linear Search.
+
+      Hint: A linear search looks down a list, one item at a time, without jumping. In complexity terms this is an O(n) search - the time taken to search the list gets bigger at the same rate as the list does.
+
+      A binary search is when you start with the middle of a sorted list, and see whether that's greater than or less than the value you're looking for, which determines whether the value is in the first or second half of the list.
+
+      <h3>Fibonacci</h3>
+      Implement an iterative version of the Fibonacci sequence which take an integer n as input and returns the nth Fibonacci number.
+      Implement a recursive version of the Fibonacci sequence which take an integer n as input and returns the nth Fibonacci number.
+      In mathematics, the Fibonacci numbers or Fibonacci series or Fibonacci sequence are the numbers in the following integer sequence:[1][2]
+      0,1,1,2,3,5,8,13,21,34,55,89,144
+      By definition, the first two numbers in the Fibonacci sequence are 0 and 1, and each subsequent number is the sum of the previous two.
+      In mathematical terms, the sequence Fn of Fibonacci numbers is defined by the recurrence relation
+      F_n = F_{n-1} + F_{n-2}
+    </div>
+
+    <div id="mock">
+
+    </div>
+
+    <div id="resources">
+
+    </div>
+
+    <div id="contact">
+
+    </div>
+  </body>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/smoothscroll.js"></script>
+  </html>
