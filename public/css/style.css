@@ -1,13 +1,16 @@
 header {
   text-align: center;
+  background: #232323;
+  color: white
 }
 
 header a {
   color: white;
 }
+
 header ul {
   padding: 10px;
-  background: rgba(0,0,0,1);
+  background: rgba(0,0,0,.5);
 }
 header li {
   display: inline;
