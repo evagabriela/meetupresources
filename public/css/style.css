@@ -1,0 +1,27 @@
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 70px;
+}
+
+header h2 {
+  text-decoration: none;
+}
+header img {
+  margin: 40px 0px 20px 0px;
+  border: 5px solid white;
+  border-radius: 20px;
+}
+header a {
+  color: white;
+}
+header ul {
+  padding: 10px;
+  background: rgba(0,0,0,1);
+}
+header li {
+  display: inline;
+  padding: 0px 10px 0px 10px;
+}
