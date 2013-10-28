@@ -4,177 +4,276 @@
 <head>
   <meta charset="utf-8" />
   <title>Algorithm & Interview Prep Resources</title>
+
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
   <link rel="stylesheet" href="/resources/demos/style.css" />
   <script>
   $(function() {
-    $( "#tabs" ).tabs();
+    $("#tabs").tabs();
+    $("#w_tabs").tabs();
+    $(".submenu").accordion();
   });
   </script>
 </head>
 <body>
-
   <div id="tabs">
-    <ul>
-      <li><a href="#about" class="smoothScroll"> About</a> </li>
-      <li><a href="#whiteboard" class="smoothScroll"> Whiteboard Problems</a> </li>
-      <li><a href="#mock" class="smoothScroll"> Mock Interview Questions</a> </li>
-      <li><a href="#resources" class="smoothScroll"> Other Resources</a> </li>
-      <li><a href="#contact" class="smoothScroll"> Contact Us</a> </li>
+  <ul>
+    <li><a href="#about" class="smoothScroll"> About</a> </li>
+    <li><a href="#whiteboard" class="smoothScroll"> Whiteboard Algorithms</a> </li>
+    <li><a href="#mock" class="smoothScroll"> Mock Interview Questions</a> </li>
+    <li><a href="#resources" class="smoothScroll"> Resources</a> </li>
+    <li><a href="#contact" class="smoothScroll"> Contact Us</a> </li>
+  </ul>
+
+
+  <div id="whiteboard">
+    <h3>Tips</h3>
+    <div>
+      <ul>
+        <li>Remember to talk out loud! - Interviewers want to understand how you think and approach problems, so talk out loud while you’re solving problems. Let the interviewer see how you’re tackling the problem, and they just might guide you as well.</li>
+        <li>Ask Questions- If you're unsure of the parameters of the question or how to proceed, do be afraid to ask questions or for clarification.</li>
+      </ul>
+      <!--   close tips -->
+    </div>
+
+
+    <div id='w_tabs'>
+     <ul>
+      <li><a href="#general" class="smoothScroll"> General Algorithms</a> </li>
+      <li><a href="#arrays" class="smoothScroll"> Arrays and Hashes</a> </li>
+      <li><a href="#lists" class="smoothScroll"> Lists</a> </li>
+      <li><a href="#stacks" class="smoothScroll"> Stacks and Queues</a> </li>
+      <li><a href="#trees" class="smoothScroll"> Trees and Graphs</a> </li>
     </ul>
 
-
-    <div id="whiteboard">
-      <h2>Whiteboarding</h2>
-
-      <h3>Tips</h3>
-      <p>
-        Remember to talk out loud! - Interviewers want to understand how you think and approach problems, so talk out loud while you’re solving problems. Let the interviewer see how you’re tackling the problem, and they just might guide you as well.
-      </p>
-      <p>
-        Ask Questions- If you're unsure of the parameters of the question or how to proceed, do be afraid to ask questions or for clarification.
-      </p>
-
+    <div id='general' class='submenu'>
       <h3>Roman Numerals</h3>
-
-      Write a method that converts an integer to its Roman numeral equivalent, i.e., 476 => 'CDLXXVI'.
-      For reference, these are the building blocks for how we encode numbers with Roman numerals:
-      I  = 1, V =  5, X  = 10, L =  50, C   = 100, D  = 500, M = 1000
-      Choose Between
-      Old-school Roman numerals (no subtraction of 4s and 9s)
-      4 = IIII, 9 = VIIII etc.
-      Modern Roman numerals (subtraction)
-      4 = IV, 9 = IX,  14 = XIV, 40 = XL, 44 = XLIV, 90 = XC, 944 = CMXLIV
+      <div>
+        Write a method that converts an integer to its Roman numeral equivalent, i.e., 476 => 'CDLXXVI'.
+        For reference, these are the building blocks for how we encode numbers with Roman numerals:
+        I  = 1, V =  5, X  = 10, L =  50, C   = 100, D  = 500, M = 1000
+        Choose Between
+        Old-school Roman numerals (no subtraction of 4s and 9s)
+        4 = IIII, 9 = VIIII etc.
+        Modern Roman numerals (subtraction)
+        4 = IV, 9 = IX,  14 = XIV, 40 = XL, 44 = XLIV, 90 = XC, 944 = CMXLIV
+      </div>
 
       <h3>Pig Latin</h3>
-      Write a method the takes in a string and returns the pig latin equivalent.  Pig Latin takes the first consonant, moves it to the end of the word and places “ay” at the end.  If the string starts with a consonant do nothing.
-      “pig” = “igpay”, “banana” = “ananabay”
-      Shuffle
-      Without using a shuffle or sort write your own shuffle method for an array. The method will take an array and returns a new array with all of the elements in a random order. One important property of a good shuffle method is that every permutation is equally likely.
-      Anagrams
-      An anagram is a word formed by rearranging the letters of another word, e.g., iceman is an anagram of cinema.
+      <div>
+        Write a method the takes in a string and returns the pig latin equivalent.  Pig Latin takes the first consonant, moves it to the end of the word and places “ay” at the end.  If the string starts with a consonant do nothing.
+        “pig” = “igpay”, “banana” = “ananabay”
+        Shuffle
+        Without using a shuffle or sort write your own shuffle method for an array. The method will take an array and returns a new array with all of the elements in a random order. One important property of a good shuffle method is that every permutation is equally likely.
+      </div>
 
-      We're going to write a method called anagrams_for that takes as its input a word and an array of words, representing a dictionary, and returns an array consisting of all the anagrams of the input word.
+      <h3>Anagrams</h3>
+      <div>
 
-      anagrams_for should return an empty array ([]) if no anagrams are found in the dictionary. You don't have to worry about the order of the returned Array.
+        An anagram is a word formed by rearranging the letters of another word, e.g., iceman is an anagram of cinema.
+
+        We're going to write a method called anagrams_for that takes as its input a word and an array of words, representing a dictionary, and returns an array consisting of all the anagrams of the input word.
+
+        anagrams_for should return an empty array ([]) if no anagrams are found in the dictionary. You don't have to worry about the order of the returned Array.
+      </div>
 
       <h3>Factorial</h3>
-      Write a recursive and iterative solution for a finding the factorial of a number. If you don't remember, the factorial of a non-negative integer n, denoted n! is the product of all positive integers less than . For example, 5! = 5 * 4 * 3 * 2 * 1
-      Binary vs. Linear Searching
-      Write an example demonstrating Binary Search.
 
-      Write an example demonstrating Linear Search.
+      <div>
 
-      Hint: A linear search looks down a list, one item at a time, without jumping. In complexity terms this is an O(n) search - the time taken to search the list gets bigger at the same rate as the list does.
+        Write a recursive and iterative solution for a finding the factorial of a number. If you don't remember, the factorial of a non-negative integer n, denoted n! is the product of all positive integers less than . For example, 5! = 5 * 4 * 3 * 2 * 1
+      </div>
 
-      A binary search is when you start with the middle of a sorted list, and see whether that's greater than or less than the value you're looking for, which determines whether the value is in the first or second half of the list.
+      <h3>Binary vs. Linear Searching</h3>
+      <div>
+
+        Write an example demonstrating Binary Search.
+        Write an example demonstrating Linear Search.
+
+        Hint: A linear search looks down a list, one item at a time, without jumping. In complexity terms this is an O(n) search - the time taken to search the list gets bigger at the same rate as the list does.
+
+        A binary search is when you start with the middle of a sorted list, and see whether that's greater than or less than the value you're looking for, which determines whether the value is in the first or second half of the list.
+      </div>
+
 
       <h3>Fibonacci</h3>
-      Implement an iterative version of the Fibonacci sequence which take an integer n as input and returns the nth Fibonacci number.
-      Implement a recursive version of the Fibonacci sequence which take an integer n as input and returns the nth Fibonacci number.
-      In mathematics, the Fibonacci numbers or Fibonacci series or Fibonacci sequence are the numbers in the following integer sequence:[1][2]
-      0,1,1,2,3,5,8,13,21,34,55,89,144
-      By definition, the first two numbers in the Fibonacci sequence are 0 and 1, and each subsequent number is the sum of the previous two.
-      In mathematical terms, the sequence Fn of Fibonacci numbers is defined by the recurrence relation
-      F_n = F_{n-1} + F_{n-2}
+      <div>
+        Implement an iterative version of the Fibonacci sequence which take an integer n as input and returns the nth Fibonacci number.
 
+        Implement a recursive version of the Fibonacci sequence which take an integer n as input and returns the nth Fibonacci number.
+
+        In mathematics, the Fibonacci numbers or Fibonacci series or Fibonacci sequence are the numbers in the following integer sequence:[1][2]
+        0,1,1,2,3,5,8,13,21,34,55,89,144
+        By definition, the first two numbers in the Fibonacci sequence are 0 and 1, and each subsequent number is the sum of the previous two.
+        In mathematical terms, the sequence Fn of Fibonacci numbers is defined by the recurrence relation
+        F_n = F_{n-1} + F_{n-2}
+      </div>
+
+      <!-- close ID general -->
+    </div>
+
+    <div id='arrays' class='submenu'>
       <h3>Arrays and Strings</h3>
 
-      Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?
+      <div>Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?
+      </div>
 
-      Write code to reverse a C-Style String. (C-String means that “abcd” is represented as five characters, including the null character.)
+      <div>Write code to reverse a C-Style String. (C-String means that “abcd” is represented as five characters, including the null character.)</div>
 
-      Design an algorithm and write code to remove the duplicate characters in a string without using any additional buffer. NOTE: One or two additional variables are fine. An extra copy of the array is not. Write the test cases for this method.
+      <div>Design an algorithm and write code to remove the duplicate characters in a string without using any additional buffer. NOTE: One or two additional variables are fine. An extra copy of the array is not. Write the test cases for this method.</div>
 
-      Write a method to decide if two strings are anagrams or not.
+      <div>Write a method to decide if two strings are anagrams or not.</div>
+      <!-- close ID arrays -->
+    </div>
 
-
+    <div id='lists' class='submenu'>
       <h3>Linked Lists</h3>
 
-      Implement an algorithm to delete a node in the middle of a singly linked list, given only access to that node.
+      <div>Implement an algorithm to delete a node in the middle of a singly linked list, given only access to that node.
 
-      EXAMPLE
+        EXAMPLE
 
-      Input: the node ‘c’ from the linked list a->b->c->d->e
-      Result: nothing is returned, but the new linked list looks like a->b->d->e
+        Input: the node ‘c’ from the linked list a->b->c->d->e
+        Result: nothing is returned, but the new linked list looks like a->b->d->e
 
-      You have two numbers represented by a linked list, where each node contains a single digit. The digits are stored in reverse order, such that the 1’s digit is at the head of the list. Write a function that adds the two numbers and returns the sum as a linked list.
+      </div>
 
-      EXAMPLE
-      Input: (3 -> 1 -> 5) + (5 -> 9 -> 2)
-      Output: 8 -> 0 -> 8
+      <div>You have two numbers represented by a linked list, where each node contains a single digit. The digits are stored in reverse order, such that the 1’s digit is at the head of the list. Write a function that adds the two numbers and returns the sum as a linked list.
 
+        EXAMPLE
+        Input: (3 -> 1 -> 5) + (5 -> 9 -> 2)
+        Output: 8 -> 0 -> 8
+      </div>
 
-      Given a circular linked list, implement an algorithm which returns node at the beginning of the loop.
-      Circular linked list: A (corrupt) linked list in which a node’s next pointer points to an earlier node, so as to make a loop in the linked list.
+      <div>
+        Given a circular linked list, implement an algorithm which returns node at the beginning of the loop.
+        Circular linked list: A (corrupt) linked list in which a node’s next pointer points to an earlier node, so as to make a loop in the linked list.
 
-      EXAMPLE
-      input: A -> B -> C -> D -> E -> C [the same C as earlier]
-      output: C
+        EXAMPLE
+        input: A -> B -> C -> D -> E -> C [the same C as earlier]
+        output: C
+      </div>
+      <!-- close ID lists -->
+    </div>
 
-      <h3>Stacks & Queues</h3>
+    <div id='trees' class='submenu'>
+      <h3>Trees & Graphs</h3>
+      <div>
+        Implement a function to check if a tree is balanced. For the purposes of this question, a balanced tree is defined to be a tree such that no two leaf nodes differ in distance from the root by more than one.
+      </div>
+      <div>Given a directed graph, design an algorithm to find out whether there is a route between two nodes.</div>
 
-      In the classic problem of the Towers of Hanoi, you have 3 rods and N disks of different sizes which can slide onto any tower. The puzzle starts with disks sorted in ascending order of size from top to bottom (e.g., each disk sits on top of an even larger one). You have the following constraints:
+      <div>Given a sorted (increasing order) array, write an algorithm to create a binary tree with minimal height.</div>
+
+      <div>Given a binary search tree, design an algorithm which creates a linked list of all the nodes at each depth (i.e., if you have a tree with depth D, you’ll have D linked lists).</div>
+
+      <!-- close ID trees -->
+    </div>
+
+    <div id='stacks' class='submenu'>
+     <h3>Stacks & Queues</h3>
+
+     <div>In the classic problem of the Towers of Hanoi, you have 3 rods and N disks of different sizes which can slide onto any tower. The puzzle starts with disks sorted in ascending order of size from top to bottom (e.g., each disk sits on top of an even larger one). You have the following constraints:
       (A) Only one disk can be moved at a time.
       (B) A disk is slid off the top of one rod onto the next rod.
       (C) A disk can only be placed on top of a larger disk.
+    </div>
 
+    <div>
       Write a program to move the disks from the first rod to the last using Stacks.
+    </div>
 
+    <div>
       Write a program to sort a stack in ascending order. You should not make any assumptions about how the stack is implemented. The following are the only functions that should be used to write this program: push | pop | peek | isEmpty.
-
-      <h3>Trees & Graphs</h3>
-
-      Implement a function to check if a tree is balanced. For the purposes of this question, a balanced tree is defined to be a tree such that no two leaf nodes differ in distance from the root by more than one.
-
-      Given a directed graph, design an algorithm to find out whether there is a route between two nodes.
-
-      Given a sorted (increasing order) array, write an algorithm to create a binary tree with minimal height.
-
-      Given a binary search tree, design an algorithm which creates a linked list of all the nodes at each depth (i.e., if you have a tree with depth D, you’ll have D linked lists).
     </div>
 
-    <div id="about">
-      <h2>ABOUT</h2>
-      <p>Algorithms and Interview Prep was created to provided women with a space to building up their algorithm and technical interview skills while meeting new friends in the industry and gaining confidence to go out change the ratio.</p>
-      <p>The group meets weekly on Mondays at different tech companies througout San Francisco.  Participants have a choice of four activities:</p>
-      <ul>
-        <li><b>Algorithms study group:</b> Design & Analysis Stanford Coursera course</li>
-        <li><b>Pair programming </b></li>
-        <li><b>White Boarding: </b>Solving algorithms & technical problems  </li>
-        <li><b>Mock Interviews: </b>Typically asked technical questions, from behavioral questions to logic and technical knowledge</li>
-      </ul>
-      <a href="http://www.meetup.com/Women-Who-Code-SF/"> Upcoming Events</a>
-
-
-
-
-    </div>
-
-    <div id="mock">
-      <h2>Mock Interview</h2>
-    </div>
-
-    <div id="resources">
-      <h2>Additional Resources</h2>
-      <h3>Websites</h3>
-      <a href="http://codeval.com">Code Eval</a> - Solve programming challenges online.
-      <br />
-      <a href="http://katemats.com/interview-questions/">Karl Mats</a>- Great resource for technical and soft skill questions.
-      <a href="http://www.interviewcake.com/">Interview Tips</a>
-      <h3>Books</h3>
-      <a href="http://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/098478280X">Cracking the Code Interview</a> by Gayle McDowel
-    </div>
-
-    <div id="contact">
-      <h2>Contact Us</h2>
-
-
-    </div>
-
+    <!-- close ID stacks -->
   </div>
+  <!-- close ID w_tabs -->
+</div>
+<!-- close ID whiteboard -->
+</div>
+
+
+<div id="about">
+
+  <h2>ABOUT</h2>
+  <p>Algorithms and Interview Prep was created to provided women with a space to building up their algorithm and technical interview skills while meeting new friends in the industry and gaining confidence to go out change the ratio.</p>
+  <p>The group meets weekly on Mondays at different tech companies througout San Francisco.  Participants have a choice of four activities:</p>
+  <ul>
+
+    <li><b>Algorithms study group:</b> Design & Analysis Stanford Coursera course</li>
+    <li><b>Pair programming </b></li>
+    <li><b>White Boarding: </b>Solving algorithms & technical problems  </li>
+    <li><b>Mock Interviews: </b>Typically asked technical questions, from behavioral questions to logic and technical knowledge</li>
+  </ul>
+  <a href="http://www.meetup.com/Women-Who-Code-SF/"> Upcoming Events</a>
+  <!-- close ID about -->
+</div>
+
+<div id="mock">
+  <h2>Mock Interview</h2>
+  <h3>Behavioral questions</h3>
+  <ol>
+    <li>Tell me about yourself.</li>
+    <li>What are your strengths / weaknesses?</li>
+    <li>Why should we hire you?</li>
+    <li>Tell me about a challenging interaction with a teammate.</li>
+    <li>How do you handle pressure?</li>
+    <li>What is your favorite website?</li>
+    <li>What do you like the most and least about working in this industry?</li>
+    <li>What questions do you have for me?</li>
+  </ol>
+
+  <h3>Base Knowledge questions (technical</h3>
+  <ol>
+    <li>What is clean code?</li>
+    <li>What development tools have you used?</li>
+    <li>What source control tools have you used?</li>
+    <li>Tell me about the project you are most proud of, and what your contribution was.</li>
+    <li>What is MVC?</li>
+    <li>What is OO? - give an example</li>
+    <li>What is an object?</li>
+    <li>What is a class?</li>
+    <li>What is the relationship between an object and a class?</li>
+    <li>What is the difference between arrays and collection?</li>
+    <li>What is the difference between a symbol and a string?</li>
+  </ol>
+
+  <h3>Technical/Logic questions</h3>
+  <ol>
+    <li>Problem: you have two jars, 50 red marbles, 50 blue marbles. you need to place all the marbles into the jars such that when you blindly pick one marble out of one jar, you maximize the chances that it will be red. (when picking, you’ll first randomly pick a jar, and then randomly pick a marble out of that jar) you can arrange the marbles however you like, but each marble must be in a jar.</li>
+    <li>You have three jars that are all mislabeled. one contains peanut butter jelly beans, another grape jelly jelly beans, and the third has a mix of both (not necessarily a 50/50 mix, could be a 1/99 mix or a 399/22 mix). how many jelly beans would you have to pull out, and out of which jars, to find out how to fix the labels on the jars?</li>
+    <li>What is the most efficient way, memory-wise, to store 1 million phone numbers?</li>
+    <li>How do you find the minimum number in a stack of unordered integers?</li>
+    <li>You have 100 doors in a row that are all initially closed. you make 100 passes by the doors starting with the first door every time. the first time through you visit every door and toggle the door (if the door is closed, you open it, if its open, you close it). the second time you only visit every 2nd door (door #2, #4, #6). the third time, every 3rd door (door #3, #6, #9), etc, until you only visit the 100th door. Question: what state are the doors in after the last pass? which are open which are closed?</li>
+    <li>What is the difference between binary search and linear search? Is one always faster than the other? What are the advantages to one over the other?</li>
+  </ol>
+  <!-- close ID mock -->
+</div>
+
+<div id="resources">
+  <h2>Additional Resources</h2>
+  <h3>Websites</h3>
+  <a href="http://codeval.com">Code Eval</a> - Solve programming challenges online.
+  <br />
+  <a href="http://katemats.com/interview-questions/">Karl Mats</a>- Great resource for technical and soft skill questions.
+  <br />
+  <a href="http://www.interviewcake.com/">Interview Tips</a>
+  <h3>Books</h3>
+  <a href="http://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/098478280X">Cracking the Code Interview</a> by Gayle McDowel
+  <!-- close ID Resources -->
+</div>
+
+<div id="contact">
+  <h2>Contact Us</h2>
+  <!-- close ID contact -->
+</div>
+<!-- close ID tabs -->
+</div>
+
 
 
 </body>
