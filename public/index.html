@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-  <link rel="stylesheet" href="/resources/demos/style.css" />
+  <link rel="stylesheet" href="css/style.css" />
   <script>
   $(function() {
     $("#tabs").tabs();
@@ -16,13 +16,15 @@
     $(".submenu").accordion();
   });
   </script>
+
 </head>
+
 <body>
 
 <div id="tabs">
   <ul>
     <li><a href="#about" class="smoothScroll"> About</a> </li>
-    <li><a href="#whiteboard" class="smoothScroll"> Whiteboard Problems</a> </li>
+    <li><a href="#whiteboard" class="smoothScroll"> Whiteboard Algorithms</a> </li>
     <li><a href="#mock" class="smoothScroll"> Mock Interview Questions</a> </li>
     <li><a href="#resources" class="smoothScroll"> Resources</a> </li>
     <li><a href="#contact" class="smoothScroll"> Contact Us</a> </li>
@@ -40,13 +42,13 @@
     <div id='w_tabs'>
      <ul>
       <li><a href="#general" class="smoothScroll"> General Algorithms</a> </li>
-      <li><a href="#arrays" class="smoothScroll"> Arrays and Hashes</a> </li>
+      <li><a href="#arrays" class="smoothScroll"> Arrays, Hashes and Strings</a> </li>
       <li><a href="#lists" class="smoothScroll"> Lists</a> </li>
       <li><a href="#stacks" class="smoothScroll"> Stacks and Queues</a> </li>
       <li><a href="#trees" class="smoothScroll"> Trees and Graphs</a> </li>
      </ul>
 
-      <div id='general' class='submenu'>
+      <div id='general' >
         <h3>Roman Numerals</h3>
         <div>
         Write a method that converts an integer to its Roman numeral equivalent, i.e., 476 => 'CDLXXVI'.
@@ -112,23 +114,22 @@
 <!-- close ID general -->    
     </div>  
 
-    <div id='arrays' class='submenu'>
-      <h3>Arrays and Strings</h3>
-
+    <div id='arrays'>
+      <hr>
       <div>Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?
       </div>
 
+      <hr>
       <div>Write code to reverse a C-Style String. (C-String means that “abcd” is represented as five characters, including the null character.)</div>
-
+      <hr>
       <div>Design an algorithm and write code to remove the duplicate characters in a string without using any additional buffer. NOTE: One or two additional variables are fine. An extra copy of the array is not. Write the test cases for this method.</div>
 
       <div>Write a method to decide if two strings are anagrams or not.</div>
 <!-- close ID arrays -->    
     </div>
 
-    <div id='lists' class='submenu'>
-      <h3>Linked Lists</h3>
-
+    <div id='lists'>
+      <hr>
       <div>Implement an algorithm to delete a node in the middle of a singly linked list, given only access to that node.
 
       EXAMPLE
@@ -137,14 +138,15 @@
       Result: nothing is returned, but the new linked list looks like a->b->d->e
 
       </div>
-
+      <hr>
       <div>You have two numbers represented by a linked list, where each node contains a single digit. The digits are stored in reverse order, such that the 1’s digit is at the head of the list. Write a function that adds the two numbers and returns the sum as a linked list.
 
       EXAMPLE
       Input: (3 -> 1 -> 5) + (5 -> 9 -> 2)
       Output: 8 -> 0 -> 8
       </div>
-
+      
+      <hr>
       <div>
       Given a circular linked list, implement an algorithm which returns node at the beginning of the loop.
       Circular linked list: A (corrupt) linked list in which a node’s next pointer points to an earlier node, so as to make a loop in the linked list.
@@ -156,33 +158,35 @@
 <!-- close ID lists -->    
     </div>
 
-    <div id='trees' class='submenu'>
-      <h3>Trees & Graphs</h3>
+    <div id='trees'>
+      <hr>
       <div>
       Implement a function to check if a tree is balanced. For the purposes of this question, a balanced tree is defined to be a tree such that no two leaf nodes differ in distance from the root by more than one.
       </div>
+      <hr>
       <div>Given a directed graph, design an algorithm to find out whether there is a route between two nodes.</div>
-
+      <hr>  
       <div>Given a sorted (increasing order) array, write an algorithm to create a binary tree with minimal height.</div>
-
+      <hr>  
       <div>Given a binary search tree, design an algorithm which creates a linked list of all the nodes at each depth (i.e., if you have a tree with depth D, you’ll have D linked lists).</div>
  
 <!-- close ID trees -->    
     </div>
 
-    <div id='stacks' class='submenu'>
-     <h3>Stacks & Queues</h3>
-
+    <div id='stacks'>
+      <hr>  
       <div>In the classic problem of the Towers of Hanoi, you have 3 rods and N disks of different sizes which can slide onto any tower. The puzzle starts with disks sorted in ascending order of size from top to bottom (e.g., each disk sits on top of an even larger one). You have the following constraints:
       (A) Only one disk can be moved at a time.
       (B) A disk is slid off the top of one rod onto the next rod.
       (C) A disk can only be placed on top of a larger disk.
       </div>
 
+      <hr>  
       <div>
       Write a program to move the disks from the first rod to the last using Stacks.
       </div>
 
+      <hr>  
       <div>
       Write a program to sort a stack in ascending order. You should not make any assumptions about how the stack is implemented. The following are the only functions that should be used to write this program: push | pop | peek | isEmpty.
       </div>
@@ -192,7 +196,6 @@
 
 <!-- close ID w_tabs -->    
   </div>
-
   <!-- close ID whiteboard -->
   </div>
 

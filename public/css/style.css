@@ -1,3 +1,7 @@
+body {
+  background: #F0F0F0;
+}
+
 header {
   text-align: center;
   background: #232323;
@@ -20,4 +24,3 @@ header li {
 h2 {
   text-align: center;
 }
-
