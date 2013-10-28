@@ -3,14 +3,16 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>jQuery UI Tabs - Default functionality</title>
+  <title>WWC - Interview Prep Resources</title>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
   <link rel="stylesheet" href="/resources/demos/style.css" />
   <script>
   $(function() {
-    $( "#tabs" ).tabs();
+    $("#tabs").tabs();
+    $("#w_tabs").tabs();
+    $(".submenu").accordion();
   });
   </script>
 </head>
@@ -18,124 +20,182 @@
  
 <div id="tabs">
   <ul>
-    <li><a href="#whiteboard" class="smoothScroll"> Whiteboard Problems</a> </li>
     <li><a href="#about" class="smoothScroll"> About</a> </li>
+    <li><a href="#whiteboard" class="smoothScroll"> Whiteboard Problems</a> </li>
     <li><a href="#mock" class="smoothScroll"> Mock Interview Questions</a> </li>
-    <li><a href="#resources" class="smoothScroll"> Other Resources</a> </li>
+    <li><a href="#resources" class="smoothScroll"> Resources</a> </li>
     <li><a href="#contact" class="smoothScroll"> Contact Us</a> </li>
   </ul>
+
   <div id="whiteboard">
-      <h2>Whiteboarding</h2>
+    <h3>Tips</h3>
+    <div>
+      <ul>
+        <li>Remember to talk out loud! - Interviewers want to understand how you think and approach problems, so talk out loud while you’re solving problems. Let the interviewer see how you’re tackling the problem, and they just might guide you as well.</li>
+        <li>Ask Questions- If you're unsure of the parameters of the question or how to proceed, do be afraid to ask questions or for clarification.</li>
+      </ul>
+    </div>
+    
+    <div id='w_tabs'>
+     <ul>
+      <li><a href="#general" class="smoothScroll"> General Algorithms</a> </li>
+      <li><a href="#arrays" class="smoothScroll"> Arrays and Hashes</a> </li>
+      <li><a href="#lists" class="smoothScroll"> Lists</a> </li>
+      <li><a href="#stacks" class="smoothScroll"> Stacks and Queues</a> </li>
+      <li><a href="#trees" class="smoothScroll"> Trees and Graphs</a> </li>
+     </ul>
 
-      <h3>Tips</h3>
-      <p>
-      Remember to talk out loud! - Interviewers want to understand how you think and approach problems, so talk out loud while you’re solving problems. Let the interviewer see how you’re tackling the problem, and they just might guide you as well.
-      </p>
-      <p>
-      Ask Questions- If you're unsure of the parameters of the question or how to proceed, do be afraid to ask questions or for clarification.
-      </p>
+      <div id='general' class='submenu'>
+        <h3>Roman Numerals</h3>
+        <div>
+        Write a method that converts an integer to its Roman numeral equivalent, i.e., 476 => 'CDLXXVI'.
+        For reference, these are the building blocks for how we encode numbers with Roman numerals:
+        I  = 1, V =  5, X  = 10, L =  50, C   = 100, D  = 500, M = 1000
+        Choose Between
+        Old-school Roman numerals (no subtraction of 4s and 9s)
+        4 = IIII, 9 = VIIII etc.
+        Modern Roman numerals (subtraction)
+        4 = IV, 9 = IX,  14 = XIV, 40 = XL, 44 = XLIV, 90 = XC, 944 = CMXLIV
+        </div>
 
-      <h3>Roman Numerals</h3>
+        <h3>Pig Latin</h3>
+        <div>
+        Write a method the takes in a string and returns the pig latin equivalent.  Pig Latin takes the first consonant, moves it to the end of the word and places “ay” at the end.  If the string starts with a consonant do nothing.
+        “pig” = “igpay”, “banana” = “ananabay”
+        Shuffle
+        Without using a shuffle or sort write your own shuffle method for an array. The method will take an array and returns a new array with all of the elements in a random order. One important property of a good shuffle method is that every permutation is equally likely.
+        </div>
 
-      Write a method that converts an integer to its Roman numeral equivalent, i.e., 476 => 'CDLXXVI'.
-      For reference, these are the building blocks for how we encode numbers with Roman numerals:
-      I  = 1, V =  5, X  = 10, L =  50, C   = 100, D  = 500, M = 1000
-      Choose Between
-      Old-school Roman numerals (no subtraction of 4s and 9s)
-      4 = IIII, 9 = VIIII etc.
-      Modern Roman numerals (subtraction)
-      4 = IV, 9 = IX,  14 = XIV, 40 = XL, 44 = XLIV, 90 = XC, 944 = CMXLIV
+        <h3>Anagrams</h3>
+        <div>  
 
-      <h3>Pig Latin</h3>
-      Write a method the takes in a string and returns the pig latin equivalent.  Pig Latin takes the first consonant, moves it to the end of the word and places “ay” at the end.  If the string starts with a consonant do nothing.
-      “pig” = “igpay”, “banana” = “ananabay”
-      Shuffle
-      Without using a shuffle or sort write your own shuffle method for an array. The method will take an array and returns a new array with all of the elements in a random order. One important property of a good shuffle method is that every permutation is equally likely.
-      Anagrams
-      An anagram is a word formed by rearranging the letters of another word, e.g., iceman is an anagram of cinema.
+        An anagram is a word formed by rearranging the letters of another word, e.g., iceman is an anagram of cinema.
 
-      We're going to write a method called anagrams_for that takes as its input a word and an array of words, representing a dictionary, and returns an array consisting of all the anagrams of the input word.
+        We're going to write a method called anagrams_for that takes as its input a word and an array of words, representing a dictionary, and returns an array consisting of all the anagrams of the input word.
 
-      anagrams_for should return an empty array ([]) if no anagrams are found in the dictionary. You don't have to worry about the order of the returned Array.
+        anagrams_for should return an empty array ([]) if no anagrams are found in the dictionary. You don't have to worry about the order of the returned Array.
+       </div>
 
-      <h3>Factorial</h3>
-      Write a recursive and iterative solution for a finding the factorial of a number. If you don't remember, the factorial of a non-negative integer n, denoted n! is the product of all positive integers less than . For example, 5! = 5 * 4 * 3 * 2 * 1
-      Binary vs. Linear Searching
-      Write an example demonstrating Binary Search.
+        <h3>Factorial</h3>
 
-      Write an example demonstrating Linear Search.
+        <div>
 
-      Hint: A linear search looks down a list, one item at a time, without jumping. In complexity terms this is an O(n) search - the time taken to search the list gets bigger at the same rate as the list does.
+        Write a recursive and iterative solution for a finding the factorial of a number. If you don't remember, the factorial of a non-negative integer n, denoted n! is the product of all positive integers less than . For example, 5! = 5 * 4 * 3 * 2 * 1
+        </div>
 
-      A binary search is when you start with the middle of a sorted list, and see whether that's greater than or less than the value you're looking for, which determines whether the value is in the first or second half of the list.
+        <h3>Binary vs. Linear Searching</h3>
+        <div>
 
-      <h3>Fibonacci</h3>
-      Implement an iterative version of the Fibonacci sequence which take an integer n as input and returns the nth Fibonacci number.
-      Implement a recursive version of the Fibonacci sequence which take an integer n as input and returns the nth Fibonacci number.
-      In mathematics, the Fibonacci numbers or Fibonacci series or Fibonacci sequence are the numbers in the following integer sequence:[1][2]
-      0,1,1,2,3,5,8,13,21,34,55,89,144
-      By definition, the first two numbers in the Fibonacci sequence are 0 and 1, and each subsequent number is the sum of the previous two.
-      In mathematical terms, the sequence Fn of Fibonacci numbers is defined by the recurrence relation
-      F_n = F_{n-1} + F_{n-2}
+        Write an example demonstrating Binary Search.
+        Write an example demonstrating Linear Search.
 
+        Hint: A linear search looks down a list, one item at a time, without jumping. In complexity terms this is an O(n) search - the time taken to search the list gets bigger at the same rate as the list does.
+
+        A binary search is when you start with the middle of a sorted list, and see whether that's greater than or less than the value you're looking for, which determines whether the value is in the first or second half of the list.
+        </div>
+
+        
+        <h3>Fibonacci</h3>
+        <div>
+        Implement an iterative version of the Fibonacci sequence which take an integer n as input and returns the nth Fibonacci number.
+        
+        Implement a recursive version of the Fibonacci sequence which take an integer n as input and returns the nth Fibonacci number.
+
+        In mathematics, the Fibonacci numbers or Fibonacci series or Fibonacci sequence are the numbers in the following integer sequence:[1][2]
+        0,1,1,2,3,5,8,13,21,34,55,89,144
+        By definition, the first two numbers in the Fibonacci sequence are 0 and 1, and each subsequent number is the sum of the previous two.
+        In mathematical terms, the sequence Fn of Fibonacci numbers is defined by the recurrence relation
+        F_n = F_{n-1} + F_{n-2}
+        </div>
+
+<!-- close ID general -->    
+    </div>  
+
+    <div id='arrays' class='submenu'>
       <h3>Arrays and Strings</h3>
 
-      Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?
+      <div>Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?
+      </div>
 
-      Write code to reverse a C-Style String. (C-String means that “abcd” is represented as five characters, including the null character.)
+      <div>Write code to reverse a C-Style String. (C-String means that “abcd” is represented as five characters, including the null character.)</div>
 
-      Design an algorithm and write code to remove the duplicate characters in a string without using any additional buffer. NOTE: One or two additional variables are fine. An extra copy of the array is not. Write the test cases for this method.
+      <div>Design an algorithm and write code to remove the duplicate characters in a string without using any additional buffer. NOTE: One or two additional variables are fine. An extra copy of the array is not. Write the test cases for this method.</div>
 
-      Write a method to decide if two strings are anagrams or not.
+      <div>Write a method to decide if two strings are anagrams or not.</div>
+<!-- close ID arrays -->    
+    </div>
 
-
+    <div id='lists' class='submenu'>
       <h3>Linked Lists</h3>
 
-      Implement an algorithm to delete a node in the middle of a singly linked list, given only access to that node.
+      <div>Implement an algorithm to delete a node in the middle of a singly linked list, given only access to that node.
 
       EXAMPLE
 
       Input: the node ‘c’ from the linked list a->b->c->d->e
       Result: nothing is returned, but the new linked list looks like a->b->d->e
 
-      You have two numbers represented by a linked list, where each node contains a single digit. The digits are stored in reverse order, such that the 1’s digit is at the head of the list. Write a function that adds the two numbers and returns the sum as a linked list.
+      </div>
+
+      <div>You have two numbers represented by a linked list, where each node contains a single digit. The digits are stored in reverse order, such that the 1’s digit is at the head of the list. Write a function that adds the two numbers and returns the sum as a linked list.
 
       EXAMPLE
       Input: (3 -> 1 -> 5) + (5 -> 9 -> 2)
       Output: 8 -> 0 -> 8
+      </div>
 
-
+      <div>
       Given a circular linked list, implement an algorithm which returns node at the beginning of the loop.
       Circular linked list: A (corrupt) linked list in which a node’s next pointer points to an earlier node, so as to make a loop in the linked list.
 
       EXAMPLE
       input: A -> B -> C -> D -> E -> C [the same C as earlier]
       output: C
+      </div>
+<!-- close ID lists -->    
+    </div>
 
-      <h3>Stacks & Queues</h3>
+    <div id='trees' class='submenu'>
+      <h3>Trees & Graphs</h3>
+      <div>
+      Implement a function to check if a tree is balanced. For the purposes of this question, a balanced tree is defined to be a tree such that no two leaf nodes differ in distance from the root by more than one.
+      </div>
+      <div>Given a directed graph, design an algorithm to find out whether there is a route between two nodes.</div>
 
-      In the classic problem of the Towers of Hanoi, you have 3 rods and N disks of different sizes which can slide onto any tower. The puzzle starts with disks sorted in ascending order of size from top to bottom (e.g., each disk sits on top of an even larger one). You have the following constraints:
+      <div>Given a sorted (increasing order) array, write an algorithm to create a binary tree with minimal height.</div>
+
+      <div>Given a binary search tree, design an algorithm which creates a linked list of all the nodes at each depth (i.e., if you have a tree with depth D, you’ll have D linked lists).</div>
+ 
+<!-- close ID trees -->    
+    </div>
+
+    <div id='stacks' class='submenu'>
+     <h3>Stacks & Queues</h3>
+
+      <div>In the classic problem of the Towers of Hanoi, you have 3 rods and N disks of different sizes which can slide onto any tower. The puzzle starts with disks sorted in ascending order of size from top to bottom (e.g., each disk sits on top of an even larger one). You have the following constraints:
       (A) Only one disk can be moved at a time.
       (B) A disk is slid off the top of one rod onto the next rod.
       (C) A disk can only be placed on top of a larger disk.
+      </div>
 
+      <div>
       Write a program to move the disks from the first rod to the last using Stacks.
+      </div>
 
+      <div>
       Write a program to sort a stack in ascending order. You should not make any assumptions about how the stack is implemented. The following are the only functions that should be used to write this program: push | pop | peek | isEmpty.
+      </div>
 
-      <h3>Trees & Graphs</h3>
+<!-- close ID stacks -->    
+    </div>
 
-      Implement a function to check if a tree is balanced. For the purposes of this question, a balanced tree is defined to be a tree such that no two leaf nodes differ in distance from the root by more than one.
+<!-- close ID w_tabs -->    
+  </div>
 
-      Given a directed graph, design an algorithm to find out whether there is a route between two nodes.
-
-      Given a sorted (increasing order) array, write an algorithm to create a binary tree with minimal height.
-
-      Given a binary search tree, design an algorithm which creates a linked list of all the nodes at each depth (i.e., if you have a tree with depth D, you’ll have D linked lists).
+  <!-- close ID whiteboard -->
   </div>
 
   <div id="about">
-        ABOUT
   </div>
 
   <div id="mock">
@@ -156,6 +216,7 @@
         <h2>Contact Us</h2>
   </div>
   
+  <!-- close ID tabs -->
 </div>
  
  
