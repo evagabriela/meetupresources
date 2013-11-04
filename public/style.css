@@ -1,56 +1,34 @@
-/* This is the most important file of your site. Please read the notes next to the attributes to learn how the CSS controls various parts of your template.  If you want to make notes as I have done just put the comment-out tags around the text as you see here.  When I refer to "comment-out" tags here, I'm referring to the slash/asterisk combo surrounding this paragraph. This is is how you comment out text and CSS styles you don't want the browser to read. */
 
 
 body {
-margin: 0;
-background-image:url(images/backgrounds/MockUp2.png);  /* This adds a background image to the template.  If you only want to use a solid color, remove the comment-out tags from around the attribute below and adjust the color to whatever you like.  Then place comment-out tags around this one so the background doesn't show.  Feel free to browse the backgrounds folder located inside the images folder to test more image backgrounds.  For example, replace purpleDesign.jpg with blueCheckers.jpg and see what you get! */
-background-repeat: repeat;  
- /* background-color: #000; */    /* This background attribute has been commented out because there is already a background image.  If you want to use a solid color for the background instead, change the hex color code to #672d67 or whatever you like and remove the comment-out tags from around the attribute. Go to http://www.2createawebsite.com/build/hex-colors.html to generate your own hex colors.  */
-  
-}
-
+  margin: 0;
+  background-repeat: repeat;  
+  background-color: #fff;      
+  }
 
 #container  {
-width: 1000px;  /* If you change the width of the site container, it could break the template.  Be careful and be ready to adjust other attributes.  */
+width: 1000px;  
 margin-right: auto;
 margin-left: auto;
-background-color: #fff; /* If you change this color, you will also need to change the color of the #leftnav and #sidebar background colors to make everything match. */
+background-color: #D9D9D9; 
 }
-
 
 #header  {
 width: 1000px;
-height: 210px;
+height: 80px;
 position: relative;
-/* background-color: #B9C7D4; */ /* If you'd rather have a solid background color instead of an image, remove the comment-out tags from this attribute and change the #B9C7D4 hex color to whatever color you'd like.  Then remove or comment-out the next two lines that start with background-image and background-repeat.  Check the headers folder inside the images folder for more header images you can use.  Feel free to create your own with Paint.net or Photoshop.  Try to make them 210 pixels high and 1000 pixels wide so they fit best. */
-background-image: url(images/headers/goldMoney.jpg);   
+ background-color: #fff; 
 background-repeat: repeat-x;
 } 
 
 
-#header #tagline {  /* This is the text below the logo.  Edit the index.html page to edit text. Use attributes below to re-position. */ 
+#header #title { 
 
   font-family: Arial, Verdana, Geneva, sans-serif;
-  font-size: 22px; 
-  color: #ccc;
-  position: absolute; top: 175px; left: 67px; 
-  
-}
-
-
-#header #logo {  /* This is what positions the logo.  Feel free to adjust numbers below to move logo around.  There is a logo.psd file in the images folder in case you have a graphics editing program.  You can edit the logo there.  If not, you can replace this one with your own in the index.html file. */
-  
-  position: absolute; top: 45px; left: 20px;
-  
-}
-
-#header #title {  /* Use this to style your title text if you don't have a logo.  Don't forget to un-comment out the code in the index.html file to make this visible in your header. */
-
-    font-family: Arial, Verdana, Geneva, sans-serif;
-  font-size: 35px; 
+  font-size: 25px; 
   color: #000;
   font-weight: bold;
-  position: absolute; top: 55px; left: 67px; 
+  position: absolute; top: 35px; left:240px; 
   
 }
 
@@ -171,7 +149,7 @@ width: 100%;
 }
 
 #content {
-margin: 0 200px 0 170px;  /* These are the left and right margins for the content area.  The 200px represents the right margin, the 120 represents the left.  This is what helps space out the area around the main content area.  Be careful adjusting these values. */ 
+margin: 0 100px 0 120px;  /* These are the left and right margins for the content area.  The 200px represents the right margin, the 120 represents the left.  This is what helps space out the area around the main content area.  Be careful adjusting these values. */ 
 background-color: #fff;  /* Changes the color of the main content area background */
 border-left: 0px solid #E0E0E0;  /* Add a border alongside the content colums by changing the 0 to a number. */
 border-right: 0px solid #E0E0E0;  /* Add a border alongside the content colums by changing the 0 to a number. */
@@ -180,69 +158,6 @@ padding-top: 20px;  /* Controls spacing around content area */
 padding-right: 10px;  /* Controls spacing around content area */
 font-family: "Verdana", "Arial", Helvetica, sans-serif;
 font-size: 12px;
-
-}
-
-#leftnav  {  /* Controls the look of the left nav and links */
-float: left;
-width: 160px;
-background-color: #fff; /* /* The background color will only travel down to the end of the content.  If you change the color and want it to go all the way down to the footer, you'll need to also change the background of the #container to match.  See notes under #container style. */
-padding: 5px;
-margin-left: -1000px;  /* Do not edit unless you know what you are doing. */
-}
-
-#leftnav ul
-{
-  margin-left: 0;
-  padding-left: 0;
-  list-style-type: none;
-  font-family: "Arial", "Helvetica", sans-serif;
-  font-size: 12px;
-}
-
-#leftnav .navlist a  /* Styles the nav links */
-{
-  display: block;
-  width: 160px;
-  padding-top: 10px; /* Controls spacing of the left nav links */
-  padding-right: 3px;  /* Controls spacing of the left nav links */
-  padding-bottom: 10px;  /* Controls spacing of the left nav links */
-  padding-left: 0px;  /* Controls spacing of the left nav links */
-  background-color: #fff;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: #7A787A;
-}
-
-
-#leftnav .navlist a:link, .navlist a:visited /* Styles the active and visited nav link colors */
-{
-color: #000;
-text-decoration: none;
-font-weight: bold;
-}
-
-#leftnav .navlist a:hover  /* Styles the background color when you hover over the nav links */
-{
-  color: #000;
-  background-color: #D6D6D6;
-}
-
-
-#leftnav .title  {   /* This attribute controls the look of the sub titles in the left navigation. */
-  
-  display: block;
-  /* background-color: #000; */   /* Remove the comment-out tags and comment out the next line if you'd rather have a background color instead of a background image for your navigation titles */
-  background-image: url(images/backgrounds/purpleDesign.gif); /* Check the backgrounds folder inside the images folder for more image options. */
-  border: 1px solid #ccc; /* Background color of left nav sub titles.  Will not show if there is a background above.  Comment out above line to show. */
-  margin-top: 20px;
-  padding: 5px 5px;
-  color: #fff;
-  font-size: 16px;
-  font-family: "Verdana", "Arial", Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 18px;
-  
 }
 
 
@@ -266,15 +181,6 @@ font-weight: bold;
   color: #C00;
   text-decoration: none;
   
-}
-
-
-#sidebar  { /* This is the right column */
-float: left;
-width: 195px;  /* Highly suggested that you leave alone unless you are sure what you are doing. */
-padding-top: 10px;
-margin-left: -195px;  /*  width and left margin have to be the same or the template may break. */
-background-color: #fff;  /* The background color will only travel down to the end of the content.  If you change the color and want it to go all the way down to the footer, you'll need to also change the background of the #container to match.  See notes under #container style. */
 }
 
 
@@ -387,20 +293,6 @@ img {  /* Automatically adds padding/spacing around every image.  Feel free to a
   padding-left: 6px;
   line-height: 16px;
 }
-
-.box2 {  /* Another box you can use if you wish. */
-  background:#faf7d8;
-  color: #000;
-  border:1px solid #672d67;
-  width: 400px;
-  height: 210px;
-  padding-right: 6px;
-  padding-bottom: 0;
-  padding-left: 6px;
-  line-height: 16px;
-  padding-top: 6px;
-}
-
 
 #fblike {   /* Positions the FB like button for your site over left nav */
   margin: 10px 0 0 42px;  /* This spaces the FB like button */
