@@ -10,7 +10,7 @@ This website contains study, practice and code challenge material necessary to h
 HTML5, CSS, Javascript & jQuery
 
 #### Group Members
-* Gaby Zamudia evagabriela[https://github.com/evagabriela]
+* Gaby Zamudio evagabriela[https://github.com/evagabriela]
 * Laura Mountamayor laumontemayor[https://github.com/laumontemayor]
 * Chantal Emmanuel cemmanuel1[https://github.com/cemmanuel1] 
 
